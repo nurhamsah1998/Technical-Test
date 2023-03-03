@@ -39,6 +39,14 @@ function HomeScreen() {
             fontSize: 20,
             fontWeight: 'bold',
           }}>
+          employee_number: {item.employee_number}
+        </Text>
+        <Text
+          style={{
+            color: '#fff',
+            fontSize: 20,
+            fontWeight: 'bold',
+          }}>
           name: {item.employee_name}
         </Text>
         <Text
@@ -68,9 +76,29 @@ function HomeScreen() {
       setData(search);
     }, 500);
   };
+  const tabMenu = [
+    {
+      category: 'medical',
+    },
+    {
+      category: 'optical',
+    },
+    {
+      category: 'transport',
+    },
+    {
+      category: 'dental',
+    },
+  ];
+  const handleTab = item => {
+    const clone = [...employeeData];
+    const search = clone.filter(i => i.category.includes(item.category));
+    setData(search);
+  };
+
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-      <View style={{}}>
+      <View style={{flex: 1}}>
         <Button title="LogOut" onPress={logOut} />
         <View
           style={{
@@ -83,7 +111,31 @@ function HomeScreen() {
             value={search}
           />
         </View>
-        <View style={{padding: 10}}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            paddingHorizontal: 20,
+          }}>
+          {tabMenu?.map((item, index) => {
+            return (
+              <TouchableOpacity
+                onPress={() => handleTab(item)}
+                style={{padding: 10, backgroundColor: 'green'}}
+                key={index}>
+                <Text
+                  style={{
+                    fontSize: 19,
+                    fontWeight: 'bold',
+                    color: '#fff',
+                  }}>
+                  {item.category}
+                </Text>
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+        <View style={{padding: 10, flex: 1}}>
           <FlatList
             ItemSeparatorComponent={<View style={{height: 20}} />}
             data={data}
