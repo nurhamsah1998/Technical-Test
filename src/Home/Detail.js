@@ -13,7 +13,7 @@ function Detail(route) {
     description,
     status,
     employee_number,
-  } = route?.route.params;
+  } = route?.route?.params;
   return (
     <View
       style={{
@@ -23,7 +23,7 @@ function Detail(route) {
         marginTop: 100,
       }}>
       <Text style={{fontSize: 24}}>Number: {employee_number}</Text>
-      <Text style={{fontSize: 24}}>Name :{employee_name}</Text>
+      <Text style={{fontSize: 24}}>Name :{employee_name || ''}</Text>
       <Text style={{fontSize: 24}}>category :{category}</Text>
       <Text style={{fontSize: 24}}>
         {' '}

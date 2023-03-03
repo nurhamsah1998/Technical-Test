@@ -44,7 +44,8 @@ function Auth() {
           justifyContent: 'center',
           marginHorizontal: 20,
         }}>
-        <Text>Ini Auth</Text>
+        <Text>Username: admin</Text>
+        <Text>Username: admin</Text>
         <TextInput
           style={styles.input}
           onChangeText={text => setUserName(text)}

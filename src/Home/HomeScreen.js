@@ -15,6 +15,7 @@ import {
 import {UserAuthContent} from '../../contextHelper';
 import employeeData from '../JSON/employeeData.json';
 import {useNavigation} from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function HomeScreen() {
   const navigate = useNavigation();
@@ -22,7 +23,9 @@ function HomeScreen() {
   const [search, setSearch] = React.useState('');
   const [data, setData] = React.useState([]);
   React.useEffect(() => {
-    setData(employeeData);
+    const clone = [...employeeData];
+    const search = clone.filter(i => i.category.includes('medical'));
+    setData(search);
   }, []);
   const Item = ({item}) => {
     const isRejected = Boolean(item.status.includes('approved'));
@@ -95,11 +98,14 @@ function HomeScreen() {
     const search = clone.filter(i => i.category.includes(item.category));
     setData(search);
   };
-
+  const handleLogOut = async () => {
+    logOut();
+    await AsyncStorage.clear();
+  };
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={{flex: 1}}>
-        <Button title="LogOut" onPress={logOut} />
+        <Button title="LogOut" onPress={handleLogOut} />
         <View
           style={{
             margin: 20,
@@ -140,7 +146,7 @@ function HomeScreen() {
             ItemSeparatorComponent={<View style={{height: 20}} />}
             data={data}
             renderItem={({item}) => <Item item={item} />}
-            keyExtractor={item => item.employee_number}
+            keyExtractor={item => item?.employee_number}
           />
         </View>
       </View>
