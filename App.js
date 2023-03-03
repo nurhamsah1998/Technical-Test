@@ -43,13 +43,12 @@ function App() {
   React.useEffect(() => {
     getUserAuth();
   }, []);
-
   return (
     <NavigationContainer>
       <UserAuthContent.Provider value={AuthContext}>
         {auth ? (
           <Stack.Navigator>
-            <Stack.Screen name="Detail" component={Detail} />
+            <Stack.Screen name="Home" component={HomeScreen} />
           </Stack.Navigator>
         ) : (
           <Stack.Navigator>
