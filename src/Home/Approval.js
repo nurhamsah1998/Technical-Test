@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import {UserAuthContent} from '../../contextHelper';
 import employeeData from '../JSON/employeeData.json';
+import arrayPaginate from 'array-paginate';
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -99,9 +100,18 @@ function Approval() {
     setData(search);
   };
   const handleLogOut = async () => {
-    logOut();
     await AsyncStorage.clear();
+    logOut();
   };
+  const [page, setPage] = React.useState(1);
+  const items = arrayPaginate(data, page, 3);
+  const handleNextPage = () => {
+    setPage(prev => prev + 1);
+  };
+  const handlePrevPage = () => {
+    setPage(prev => prev - 1);
+  };
+  console.log(items);
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={{flex: 1}}>
@@ -144,7 +154,32 @@ function Approval() {
         <View style={{padding: 10, flex: 1}}>
           <FlatList
             ItemSeparatorComponent={<View style={{height: 20}} />}
-            data={data}
+            data={items?.docs}
+            ListFooterComponent={
+              <View
+                style={{
+                  height: 60,
+                  width: '100%',
+                  backgroundColor: 'pink',
+                  marginVertical: 20,
+                  flexDirection: 'row',
+                  justifyContent: 'flex-end',
+                  alignItems: 'center',
+                  paddingHorizontal: 20,
+                }}>
+                <Button
+                  title="Prev"
+                  disabled={!items.hasPrevPage}
+                  onPress={handlePrevPage}
+                />
+                <Button
+                  title="Next"
+                  disabled={!items.hasNextPage}
+                  onPress={handleNextPage}
+                  color="blue"
+                />
+              </View>
+            }
             renderItem={({item}) => <Item item={item} />}
             keyExtractor={item => item?.employee_number}
           />

@@ -20,19 +20,23 @@ function Auth() {
   const [userName, setUserName] = React.useState('');
   const [password, setPassword] = React.useState('');
   const handleLogin = async () => {
-    try {
-      const isAuth = loginData.find(
-        i => i.username.includes(userName) && i.password.includes(password),
-      );
-      if (isAuth) {
-        await AsyncStorage.setItem('@access_token', 'Token');
-        login();
-      } else {
-        Alert.alert('WRONG!!');
-        console.log('asd');
+    if (userName === '' || password === '') {
+      Alert.alert('Fill All Field!!!');
+    } else {
+      try {
+        const isAuth = loginData.find(
+          i => i.username.includes(userName) && i.password.includes(password),
+        );
+        if (isAuth) {
+          await AsyncStorage.setItem('@access_token', 'Token');
+          login();
+        } else {
+          Alert.alert('WRONG!!');
+          console.log('asd');
+        }
+      } catch (e) {
+        // saving error
       }
-    } catch (e) {
-      // saving error
     }
   };
   return (

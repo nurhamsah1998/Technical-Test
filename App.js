@@ -49,6 +49,7 @@ function App() {
         {auth ? (
           <Stack.Navigator>
             <Stack.Screen name="Approval" component={Approval} />
+            <Stack.Screen name="Detail" component={Detail} />
           </Stack.Navigator>
         ) : (
           <Stack.Navigator>

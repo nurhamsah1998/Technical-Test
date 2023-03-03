@@ -1,176 +1,227 @@
-[{
+[
+  {
     "employee_number": 1,
     "employee_name": "Agatha",
     "category": "medical",
     "reimbursement_amount": 16314,
+    "claim_date": "8/25/2022",
     "description": "Zonotrichia capensis",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 2,
     "employee_name": "Michelina",
     "category": "medical",
     "reimbursement_amount": 16298,
+    "claim_date": "8/25/2022",
     "description": "Nucifraga columbiana",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 3,
     "employee_name": "Olvan",
     "category": "medical",
     "reimbursement_amount": 65187,
+    "claim_date": "8/25/2022",
     "description": "Macropus agilis",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 4,
     "employee_name": "Janeva",
+    "claim_date": "8/25/2022",
     "category": "medical",
     "reimbursement_amount": 46472,
     "description": "Phoca vitulina",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 5,
     "employee_name": "Laurena",
     "category": "optical",
     "reimbursement_amount": 61891,
+    "claim_date": "8/25/2022",
     "description": "Ratufa indica",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 6,
     "employee_name": "Lori",
+    "claim_date": "8/25/2022",
     "category": "optical",
     "reimbursement_amount": 44313,
     "description": "Laniaurius atrococcineus",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 7,
     "employee_name": "Tome",
+    "claim_date": "8/25/2022",
     "category": "optical",
     "reimbursement_amount": 67457,
     "description": "Acridotheres tristis",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 8,
     "employee_name": "Auria",
     "category": "optical",
     "reimbursement_amount": 68652,
+    "claim_date": "8/25/2022",
     "description": "Dolichitus patagonum",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 9,
     "employee_name": "Ag",
     "category": "transport",
     "reimbursement_amount": 59341,
+    "claim_date": "8/25/2022",
     "description": "Felis wiedi or Leopardus weidi",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 10,
     "employee_name": "Ernesta",
     "category": "transport",
+    "claim_date": "8/25/2022",
     "reimbursement_amount": 22559,
     "description": "Merops bullockoides",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 11,
     "employee_name": "Dannye",
     "category": "transport",
+    "claim_date": "8/25/2022",
     "reimbursement_amount": 17657,
     "description": "unavailable",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 12,
     "employee_name": "Sigfrid",
+    "claim_date": "8/25/2022",
     "category": "transport",
     "reimbursement_amount": 48695,
     "description": "Galictis vittata",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 13,
     "employee_name": "Sorcha",
     "category": "transport",
     "reimbursement_amount": 23410,
+    "claim_date": "8/25/2022",
     "description": "Lamprotornis sp.",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 14,
     "employee_name": "Leodora",
     "category": "dental",
     "reimbursement_amount": 35059,
+    "claim_date": "8/25/2022",
     "description": "Vanellus armatus",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 15,
     "employee_name": "Waly",
     "category": "dental",
+    "claim_date": "8/25/2022",
     "reimbursement_amount": 73759,
     "description": "Leptoptilus dubius",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 16,
     "employee_name": "Oberon",
     "category": "dental",
+    "claim_date": "8/25/2022",
     "reimbursement_amount": 13069,
     "description": "Coluber constrictor",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 17,
     "employee_name": "Aharon",
     "category": "dental",
     "reimbursement_amount": 42569,
+    "claim_date": "8/25/2022",
     "description": "Dicrurus adsimilis",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 18,
     "employee_name": "Gweneth",
+    "claim_date": "8/25/2022",
     "category": "dental",
     "reimbursement_amount": 75801,
     "description": "Tragelaphus angasi",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 19,
     "employee_name": "Jannel",
     "category": "dental",
+    "claim_date": "8/25/2022",
     "reimbursement_amount": 54100,
     "description": "Paraxerus cepapi",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 20,
     "employee_name": "Celinda",
+    "claim_date": "8/25/2022",
     "category": "medical",
     "reimbursement_amount": 50912,
     "description": "Cereopsis novaehollandiae",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 21,
     "employee_name": "Sheffie",
     "category": "medical",
+    "claim_date": "8/25/2022",
     "reimbursement_amount": 13242,
     "description": "Crocodylus niloticus",
     "status": "approved"
-  }, {
+  },
+  {
     "employee_number": 22,
+    "claim_date": "8/25/2022",
     "employee_name": "Reggie",
     "category": "medical",
     "reimbursement_amount": 69197,
     "description": "Phalacrocorax varius",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 23,
     "employee_name": "Tadio",
     "category": "medical",
+    "claim_date": "8/25/2022",
     "reimbursement_amount": 74040,
     "description": "Neophoca cinerea",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 24,
     "employee_name": "Tonnie",
     "category": "medical",
     "reimbursement_amount": 25687,
+    "claim_date": "8/25/2022",
     "description": "Genetta genetta",
     "status": "rejected"
-  }, {
+  },
+  {
     "employee_number": 25,
     "employee_name": "Merrily",
     "category": "medical",
     "reimbursement_amount": 47387,
     "description": "Meleagris gallopavo",
-    "status": "approved"
-  }]
+    "status": "approved",
+    "claim_date": "8/25/2022"
+  }
+]
