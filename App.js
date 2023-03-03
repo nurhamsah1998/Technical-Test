@@ -7,7 +7,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {UserAuthContent} from './contextHelper';
 import Auth from './src/Auth/Login';
-import HomeScreen from './src/Home/HomeScreen';
+import Approval from './src/Home/Approval';
 import Detail from './src/Home/Detail';
 
 const Stack = createNativeStackNavigator();
@@ -48,7 +48,7 @@ function App() {
       <UserAuthContent.Provider value={AuthContext}>
         {auth ? (
           <Stack.Navigator>
-            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Approval" component={Approval} />
           </Stack.Navigator>
         ) : (
           <Stack.Navigator>

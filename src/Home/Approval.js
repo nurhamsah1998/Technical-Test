@@ -17,7 +17,7 @@ import employeeData from '../JSON/employeeData.json';
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-function HomeScreen() {
+function Approval() {
   const navigate = useNavigation();
   const {logOut} = React.useContext(UserAuthContent);
   const [search, setSearch] = React.useState('');
@@ -161,6 +161,6 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 });
-export default HomeScreen;
+export default Approval;
 
 // {flex: 1, alignItems: 'center', justifyContent: 'center'}
